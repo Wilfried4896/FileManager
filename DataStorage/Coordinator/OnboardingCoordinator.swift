@@ -8,7 +8,7 @@
 import UIKit
 
 class OnboardingCoordinator: Coordinator {
-    weak var parent: TabBarCoordinator?
+    weak var parent: Coordinator?
     
     var childCoordinators: [Coordinator] = []
     var navigation: UINavigationController
@@ -18,13 +18,12 @@ class OnboardingCoordinator: Coordinator {
     }
     
     func start() {
-        let vc = UIStoryboard(name: "AppStoryboard", bundle: nil).instantiateViewController(withIdentifier: "OnboardingVC") as! OnboardingVC
+        let vc =  OnboardingVC.instantiate()
         vc.coordinator = self
-        navigation.navigationBar.prefersLargeTitles = true
         navigation.pushViewController(vc, animated: true)
     }
     
     func didFinsh() {
+        
     }
-    
 }

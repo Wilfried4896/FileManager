@@ -7,9 +7,15 @@
 
 import UIKit
 
-class OnboardingVC: UIViewController {
+class OnboardingVC: UIViewController, Storyboarded {
     weak var coordinator: OnboardingCoordinator?
-    @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.delegate = self
+            tableView.dataSource = self
+        }
+    }
     
     private lazy var addDocument: UIBarButtonItem = {
         let document = UIBarButtonItem(image: UIImage(systemName: "folder.fill.badge.plus"), style: .plain, target: self, action: #selector(didTapAddDocument))
@@ -23,7 +29,6 @@ class OnboardingVC: UIViewController {
     
     let fileOfDocumenteModel = FileOfDocumenteModel.shared
     var fileCreated = String()
-    
     var dataFromDocument = [String]() {
         didSet {
             DispatchQueue.main.async {
@@ -34,24 +39,22 @@ class OnboardingVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        tableView.delegate = self
-        tableView.dataSource = self
-        
         navigationItem.rightBarButtonItems =  [addFile, addDocument]
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         fileOfDocumenteModel.loadFile(nil) { fileData  in
-            for file in fileData {
-                dataFromDocument.append(file)
-            }
+            dataFromDocument = fileData
         }
     }
     
-      @objc func didTapAddDocument() {
+    @objc func didTapAddDocument() {
           nameFileCreate()
     }
-
-
+    
      @objc func didTapAddFile() {
          coordinator?.start()
     }

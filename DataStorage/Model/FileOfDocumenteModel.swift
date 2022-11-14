@@ -55,15 +55,15 @@ struct FileOfDocumenteModel {
     }
     
     func loadFile(_ pathDoc: String?, completion: ([String]) -> Void) {
-        var pathImage = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let pathImage = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         
-        if let pathDoc {
-            pathImage = pathImage.appendingPathComponent(pathDoc)
-        }
+//        if let pathDoc {
+//            pathImage = pathImage.appendingPathComponent(pathDoc)
+//        }
         var imagesReceived = [String]()
         
         do {
-            imagesReceived = try FileManager.default.contentsOfDirectory(atPath: pathImage.path)
+            imagesReceived = isSorting(try FileManager.default.contentsOfDirectory(atPath: pathImage.path))
             
         } catch {
             print(error.localizedDescription)
@@ -82,5 +82,12 @@ struct FileOfDocumenteModel {
         } catch {
             print(error.localizedDescription)
         }
+    }
+    
+    func isSorting(_ array: [String]) -> [String] {
+        guard UserDefaults.standard.bool(forKey: "SwitchValue") else {
+            return array
+        }
+        return array.sorted { $0 < $1 }
     }
 }

@@ -22,7 +22,10 @@
 		EC70A2DB291E6AAC00DC7A85 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70A2DA291E6AAB00DC7A85 /* AuthCoordinator.swift */; };
 		EC70A2DD291E6FE700DC7A85 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70A2DC291E6FE700DC7A85 /* TabBarCoordinator.swift */; };
 		EC70A2E1291E83A300DC7A85 /* SettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70A2E0291E83A300DC7A85 /* SettingCoordinator.swift */; };
-		EC70A2E3291E843D00DC7A85 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70A2E2291E843D00DC7A85 /* SettingVC.swift */; };
+		EC70A2E6291EC4E200DC7A85 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = EC70A2E5291EC4E200DC7A85 /* KeychainAccess */; };
+		EC8B7961291EE85E003A788C /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8B7960291EE85E003A788C /* AuthViewModel.swift */; };
+		EC8B7963291EFFAA003A788C /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8B7962291EFFAA003A788C /* Storyboarded.swift */; };
+		EC8B7967291FE379003A788C /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8B7966291FE379003A788C /* SettingVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +46,9 @@
 		EC70A2DA291E6AAB00DC7A85 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		EC70A2DC291E6FE700DC7A85 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		EC70A2E0291E83A300DC7A85 /* SettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCoordinator.swift; sourceTree = "<group>"; };
-		EC70A2E2291E843D00DC7A85 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		EC8B7960291EE85E003A788C /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		EC8B7962291EFFAA003A788C /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		EC8B7966291FE379003A788C /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC70A2E6291EC4E200DC7A85 /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				EC3DF0BA291957C600FFCFE6 /* FileOfDocumenteModel.swift */,
+				EC8B7960291EE85E003A788C /* AuthViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -101,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				EC6B5C7729191B7900459ED8 /* Coordinator.swift */,
+				EC8B7962291EFFAA003A788C /* Storyboarded.swift */,
 				EC6B5C7929191D0D00459ED8 /* AppCoordinator.swift */,
 				EC6B5C7E2919215200459ED8 /* OnboardingCoordinator.swift */,
 				EC70A2DA291E6AAB00DC7A85 /* AuthCoordinator.swift */,
@@ -116,7 +124,7 @@
 				EC6B5C7C2919213D00459ED8 /* OnboardingVC.swift */,
 				EC3DF0B72919417E00FFCFE6 /* DocumentCell.swift */,
 				EC70A2D8291E576300DC7A85 /* AuthenticationVC.swift */,
-				EC70A2E2291E843D00DC7A85 /* SettingVC.swift */,
+				EC8B7966291FE379003A788C /* SettingVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -137,6 +145,9 @@
 			dependencies = (
 			);
 			name = DataStorage;
+			packageProductDependencies = (
+				EC70A2E5291EC4E200DC7A85 /* KeychainAccess */,
+			);
 			productName = DataStorage;
 			productReference = EC6B5C5F2919188100459ED8 /* DataStorage.app */;
 			productType = "com.apple.product-type.application";
@@ -165,6 +176,9 @@
 				Base,
 			);
 			mainGroup = EC6B5C562919188100459ED8;
+			packageReferences = (
+				EC70A2E4291EC4E200DC7A85 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = EC6B5C602919188100459ED8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -193,7 +207,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC70A2DB291E6AAC00DC7A85 /* AuthCoordinator.swift in Sources */,
+				EC8B7967291FE379003A788C /* SettingVC.swift in Sources */,
 				EC70A2E1291E83A300DC7A85 /* SettingCoordinator.swift in Sources */,
+				EC8B7963291EFFAA003A788C /* Storyboarded.swift in Sources */,
 				EC6B5C7829191B7900459ED8 /* Coordinator.swift in Sources */,
 				EC6B5C7F2919215200459ED8 /* OnboardingCoordinator.swift in Sources */,
 				EC70A2D9291E576300DC7A85 /* AuthenticationVC.swift in Sources */,
@@ -202,9 +218,9 @@
 				EC70A2DD291E6FE700DC7A85 /* TabBarCoordinator.swift in Sources */,
 				EC6B5C632919188100459ED8 /* AppDelegate.swift in Sources */,
 				EC6B5C652919188100459ED8 /* SceneDelegate.swift in Sources */,
+				EC8B7961291EE85E003A788C /* AuthViewModel.swift in Sources */,
 				EC3DF0B82919417E00FFCFE6 /* DocumentCell.swift in Sources */,
 				EC3DF0BB291957C600FFCFE6 /* FileOfDocumenteModel.swift in Sources */,
-				EC70A2E3291E843D00DC7A85 /* SettingVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +428,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EC70A2E4291EC4E200DC7A85 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EC70A2E5291EC4E200DC7A85 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC70A2E4291EC4E200DC7A85 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EC6B5C572919188100459ED8 /* Project object */;
 }

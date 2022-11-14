@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import KeychainAccess
 
 class SettingCoordinator: Coordinator {
-    weak var parent: TabBarCoordinator?
+    weak var parent: Coordinator?
     var childCoordinators: [Coordinator] = []
     var navigation: UINavigationController
     
@@ -17,9 +18,16 @@ class SettingCoordinator: Coordinator {
     }
     
     func start() {
-        let vc = UIStoryboard(name: "AppStoryboard", bundle: nil).instantiateViewController(withIdentifier: "SettingVC") as! SettingVC
-        
+        let vc = SettingVC.instantiate()
         vc.coordinator = self
         navigation.pushViewController(vc, animated: true)
+    }
+    
+    func authChangedPassword() {
+        let viewModel = AuthViewModel()
+        
+        let authVC = AuthenticationVC.instantiate()
+        authVC.authViewModel = viewModel
+        navigation.present(authVC, animated: true)
     }
 }
