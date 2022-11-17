@@ -8,7 +8,7 @@
 import UIKit
 
 class TabBarCoordinator: Coordinator {
-    weak var parent: AppCoordinator?
+    weak var parent: Coordinator?
     
     var childCoordinators: [Coordinator] = []
     var navigation: UITabBarController

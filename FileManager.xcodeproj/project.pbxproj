@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EC3DF0B6291923B700FFCFE6 /* AppStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC3DF0B5291923B700FFCFE6 /* AppStoryboard.storyboard */; };
-		EC3DF0B82919417E00FFCFE6 /* DocumentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3DF0B72919417E00FFCFE6 /* DocumentCell.swift */; };
 		EC3DF0BB291957C600FFCFE6 /* FileOfDocumenteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3DF0BA291957C600FFCFE6 /* FileOfDocumenteModel.swift */; };
 		EC6B5C632919188100459ED8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5C622919188100459ED8 /* AppDelegate.swift */; };
 		EC6B5C652919188100459ED8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6B5C642919188100459ED8 /* SceneDelegate.swift */; };
@@ -22,14 +20,17 @@
 		EC70A2DB291E6AAC00DC7A85 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70A2DA291E6AAB00DC7A85 /* AuthCoordinator.swift */; };
 		EC70A2DD291E6FE700DC7A85 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70A2DC291E6FE700DC7A85 /* TabBarCoordinator.swift */; };
 		EC70A2E1291E83A300DC7A85 /* SettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70A2E0291E83A300DC7A85 /* SettingCoordinator.swift */; };
-		EC70A2E3291E843D00DC7A85 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC70A2E2291E843D00DC7A85 /* SettingVC.swift */; };
+		EC70A2E6291EC4E200DC7A85 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = EC70A2E5291EC4E200DC7A85 /* KeychainAccess */; };
+		EC71AB702923B564003EA87A /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC71AB6F2923B564003EA87A /* SettingModel.swift */; };
+		EC71AB722923C432003EA87A /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC71AB712923C432003EA87A /* SwitchTableViewCell.swift */; };
+		EC71AB802925858F003EA87A /* SettingPasswordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC71AB7F2925858F003EA87A /* SettingPasswordCell.swift */; };
+		EC8B7961291EE85E003A788C /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8B7960291EE85E003A788C /* AuthViewModel.swift */; };
+		EC8B7967291FE379003A788C /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8B7966291FE379003A788C /* SettingVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EC3DF0B5291923B700FFCFE6 /* AppStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AppStoryboard.storyboard; sourceTree = "<group>"; };
-		EC3DF0B72919417E00FFCFE6 /* DocumentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCell.swift; sourceTree = "<group>"; };
 		EC3DF0BA291957C600FFCFE6 /* FileOfDocumenteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileOfDocumenteModel.swift; sourceTree = "<group>"; };
-		EC6B5C5F2919188100459ED8 /* DataStorage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataStorage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC6B5C5F2919188100459ED8 /* FileManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC6B5C622919188100459ED8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC6B5C642919188100459ED8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EC6B5C6B2919188600459ED8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,7 +44,11 @@
 		EC70A2DA291E6AAB00DC7A85 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		EC70A2DC291E6FE700DC7A85 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		EC70A2E0291E83A300DC7A85 /* SettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCoordinator.swift; sourceTree = "<group>"; };
-		EC70A2E2291E843D00DC7A85 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		EC71AB6F2923B564003EA87A /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
+		EC71AB712923C432003EA87A /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		EC71AB7F2925858F003EA87A /* SettingPasswordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPasswordCell.swift; sourceTree = "<group>"; };
+		EC8B7960291EE85E003A788C /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		EC8B7966291FE379003A788C /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC70A2E6291EC4E200DC7A85 /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +67,8 @@
 			isa = PBXGroup;
 			children = (
 				EC3DF0BA291957C600FFCFE6 /* FileOfDocumenteModel.swift */,
+				EC8B7960291EE85E003A788C /* AuthViewModel.swift */,
+				EC71AB6F2923B564003EA87A /* SettingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -68,7 +76,7 @@
 		EC6B5C562919188100459ED8 = {
 			isa = PBXGroup;
 			children = (
-				EC6B5C612919188100459ED8 /* DataStorage */,
+				EC6B5C612919188100459ED8 /* FileManager */,
 				EC6B5C602919188100459ED8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,12 +84,12 @@
 		EC6B5C602919188100459ED8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EC6B5C5F2919188100459ED8 /* DataStorage.app */,
+				EC6B5C5F2919188100459ED8 /* FileManager.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EC6B5C612919188100459ED8 /* DataStorage */ = {
+		EC6B5C612919188100459ED8 /* FileManager */ = {
 			isa = PBXGroup;
 			children = (
 				EC3DF0B9291957A800FFCFE6 /* Model */,
@@ -90,11 +98,10 @@
 				EC6B5C622919188100459ED8 /* AppDelegate.swift */,
 				EC6B5C642919188100459ED8 /* SceneDelegate.swift */,
 				EC6B5C6B2919188600459ED8 /* Assets.xcassets */,
-				EC3DF0B5291923B700FFCFE6 /* AppStoryboard.storyboard */,
 				EC6B5C6D2919188600459ED8 /* LaunchScreen.storyboard */,
 				EC6B5C702919188600459ED8 /* Info.plist */,
 			);
-			path = DataStorage;
+			path = FileManager;
 			sourceTree = "<group>";
 		};
 		EC6B5C7629191B5E00459ED8 /* Coordinator */ = {
@@ -114,9 +121,10 @@
 			isa = PBXGroup;
 			children = (
 				EC6B5C7C2919213D00459ED8 /* OnboardingVC.swift */,
-				EC3DF0B72919417E00FFCFE6 /* DocumentCell.swift */,
 				EC70A2D8291E576300DC7A85 /* AuthenticationVC.swift */,
-				EC70A2E2291E843D00DC7A85 /* SettingVC.swift */,
+				EC8B7966291FE379003A788C /* SettingVC.swift */,
+				EC71AB712923C432003EA87A /* SwitchTableViewCell.swift */,
+				EC71AB7F2925858F003EA87A /* SettingPasswordCell.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -124,9 +132,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EC6B5C5E2919188100459ED8 /* DataStorage */ = {
+		EC6B5C5E2919188100459ED8 /* FileManager */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC6B5C732919188600459ED8 /* Build configuration list for PBXNativeTarget "DataStorage" */;
+			buildConfigurationList = EC6B5C732919188600459ED8 /* Build configuration list for PBXNativeTarget "FileManager" */;
 			buildPhases = (
 				EC6B5C5B2919188100459ED8 /* Sources */,
 				EC6B5C5C2919188100459ED8 /* Frameworks */,
@@ -136,9 +144,12 @@
 			);
 			dependencies = (
 			);
-			name = DataStorage;
+			name = FileManager;
+			packageProductDependencies = (
+				EC70A2E5291EC4E200DC7A85 /* KeychainAccess */,
+			);
 			productName = DataStorage;
-			productReference = EC6B5C5F2919188100459ED8 /* DataStorage.app */;
+			productReference = EC6B5C5F2919188100459ED8 /* FileManager.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -156,7 +167,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EC6B5C5A2919188100459ED8 /* Build configuration list for PBXProject "DataStorage" */;
+			buildConfigurationList = EC6B5C5A2919188100459ED8 /* Build configuration list for PBXProject "FileManager" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -165,11 +176,14 @@
 				Base,
 			);
 			mainGroup = EC6B5C562919188100459ED8;
+			packageReferences = (
+				EC70A2E4291EC4E200DC7A85 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = EC6B5C602919188100459ED8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EC6B5C5E2919188100459ED8 /* DataStorage */,
+				EC6B5C5E2919188100459ED8 /* FileManager */,
 			);
 		};
 /* End PBXProject section */
@@ -181,7 +195,6 @@
 			files = (
 				EC6B5C6F2919188600459ED8 /* LaunchScreen.storyboard in Resources */,
 				EC6B5C6C2919188600459ED8 /* Assets.xcassets in Resources */,
-				EC3DF0B6291923B700FFCFE6 /* AppStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,8 +206,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC70A2DB291E6AAC00DC7A85 /* AuthCoordinator.swift in Sources */,
+				EC8B7967291FE379003A788C /* SettingVC.swift in Sources */,
+				EC71AB722923C432003EA87A /* SwitchTableViewCell.swift in Sources */,
 				EC70A2E1291E83A300DC7A85 /* SettingCoordinator.swift in Sources */,
 				EC6B5C7829191B7900459ED8 /* Coordinator.swift in Sources */,
+				EC71AB802925858F003EA87A /* SettingPasswordCell.swift in Sources */,
 				EC6B5C7F2919215200459ED8 /* OnboardingCoordinator.swift in Sources */,
 				EC70A2D9291E576300DC7A85 /* AuthenticationVC.swift in Sources */,
 				EC6B5C7A29191D0D00459ED8 /* AppCoordinator.swift in Sources */,
@@ -202,9 +218,9 @@
 				EC70A2DD291E6FE700DC7A85 /* TabBarCoordinator.swift in Sources */,
 				EC6B5C632919188100459ED8 /* AppDelegate.swift in Sources */,
 				EC6B5C652919188100459ED8 /* SceneDelegate.swift in Sources */,
-				EC3DF0B82919417E00FFCFE6 /* DocumentCell.swift in Sources */,
+				EC8B7961291EE85E003A788C /* AuthViewModel.swift in Sources */,
+				EC71AB702923B564003EA87A /* SettingModel.swift in Sources */,
 				EC3DF0BB291957C600FFCFE6 /* FileOfDocumenteModel.swift in Sources */,
-				EC70A2E3291E843D00DC7A85 /* SettingVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +361,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5V4PQH75UR;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DataStorage/Info.plist;
+				INFOPLIST_FILE = FileManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -355,7 +371,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-.DataStorage";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.FileManager";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -372,7 +388,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5V4PQH75UR;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DataStorage/Info.plist;
+				INFOPLIST_FILE = FileManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -382,7 +398,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-.DataStorage";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.FileManager";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -393,7 +409,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EC6B5C5A2919188100459ED8 /* Build configuration list for PBXProject "DataStorage" */ = {
+		EC6B5C5A2919188100459ED8 /* Build configuration list for PBXProject "FileManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC6B5C712919188600459ED8 /* Debug */,
@@ -402,7 +418,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EC6B5C732919188600459ED8 /* Build configuration list for PBXNativeTarget "DataStorage" */ = {
+		EC6B5C732919188600459ED8 /* Build configuration list for PBXNativeTarget "FileManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EC6B5C742919188600459ED8 /* Debug */,
@@ -412,6 +428,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EC70A2E4291EC4E200DC7A85 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EC70A2E5291EC4E200DC7A85 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC70A2E4291EC4E200DC7A85 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EC6B5C572919188100459ED8 /* Project object */;
 }
