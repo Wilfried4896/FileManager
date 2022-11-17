@@ -18,16 +18,19 @@ class SettingCoordinator: Coordinator {
     }
     
     func start() {
-        let vc = SettingVC.instantiate()
+        let vc = SettingVC()
         vc.coordinator = self
         navigation.pushViewController(vc, animated: true)
     }
     
     func authChangedPassword() {
         let viewModel = AuthViewModel()
-        
-        let authVC = AuthenticationVC.instantiate()
+        let authVC = AuthenticationVC()
+        authVC.title = "Поменять пароль"
+        let nav = UINavigationController(rootViewController: authVC)
+        nav.modalPresentationStyle = .fullScreen
+        viewModel.removePassword()
         authVC.authViewModel = viewModel
-        navigation.present(authVC, animated: true)
+        navigation.present(nav, animated: true)
     }
 }

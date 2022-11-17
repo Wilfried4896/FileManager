@@ -18,7 +18,8 @@ class AuthCoordinator: Coordinator {
     
     func start() {
         let viewModel = AuthViewModel()
-        let vc = AuthenticationVC.instantiate()
+        let vc = AuthenticationVC()
+        vc.title = "Authentication"
         vc.coordinator = self
         vc.authViewModel = viewModel
         navigation.navigationBar.prefersLargeTitles = true

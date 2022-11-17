@@ -18,7 +18,7 @@ class OnboardingCoordinator: Coordinator {
     }
     
     func start() {
-        let vc =  OnboardingVC.instantiate()
+        let vc =  OnboardingController()
         vc.coordinator = self
         navigation.pushViewController(vc, animated: true)
     }
